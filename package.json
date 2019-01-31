@@ -1,0 +1,51 @@
+{
+  "name": "arch",
+  "version": "1.0.0",
+  "description": "Walter assets",
+  "repository": "https://github.com/waltercompanies/arch.git",
+  "author": "Marcel de Graaf <marcel@walterhq.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "scripts": {
+    "eslint": "./node_modules/.bin/eslint --ext .js,.vue ./js",
+    "format": "./node_modules/.bin/eslint --ext .js,.vue ./js --fix",
+    "build": "webpack --config ./webpack.js",
+    "watch": "webpack --config ./webpack.js --watch --color --progress"
+  },
+  "files": [
+    "assets",
+    "css",
+    "fonts",
+    "js",
+    "types/*.d.ts"
+  ],
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "@babel/core": "~7",
+    "@babel/plugin-syntax-decorators": "~7",
+    "@babel/plugin-syntax-dynamic-import": "~7",
+    "@babel/preset-env": "~7",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "vue": "~2",
+    "vue-loader": "~15",
+    "vue-resource": "^1.5.1"
+  },
+  "devDependencies": {
+    "babel-loader": "~8",
+    "file-loader": "1.1.11",
+    "ts-loader": "^5.3.2",
+    "typescript": "^3.3.0-dev.20190124",
+    "vue-class-component": "^6.3.2",
+    "vue-property-decorator": "^7.3.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "~3",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
